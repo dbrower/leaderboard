@@ -1,0 +1,13 @@
+
+p { font: Helvetica }
+h1 { width: 100% }
+.title { font-size: 48pt; text-align: right}
+.zebra { background-color: #bbccff; } 
+table { width: 100%; }
+th {font-size: 24pt; text-align: center; padding-left: 15px; padding-right: 15px}
+td {font-size: 18pt; text-align: right; padding-left:15px; padding-right: 15px}
+.teamname {text-align: left; font-weight: bold; }
+.tablenumber {font-style: italic; text-align: center}
+.center { text-align: center}
+img { vertical-align: top; padding-right: 10%; }
+

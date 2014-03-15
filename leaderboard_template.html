@@ -1,0 +1,44 @@
+@require(teams, cycle)
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="leaderboard.css">
+</head>
+<body>
+    <h1><img src="sjcpl_logo.jpg">
+    <span class="title">
+        Leaderboard
+    </span></h1>
+    <table>
+        <tr><th>Rank</th>
+            <th>Team Name</th>
+            <th>Table</th>
+            <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th> <th>7</th> <th>8</th> <th>9</th> <th>10</th>
+            <th>Total</th>
+        </tr>
+        @for t in teams:
+            <tr
+                @if cycle():
+                class="zebra"
+                @end
+            >
+            <td class="center">
+                @if t.rank != None:
+                    @t.rank!s
+                @end
+                </td>
+            <td class="teamname">@t.name</td>
+            <td class="tablenumber">@t.tablenr!s</td>
+            @for n in range(10):
+                @if n < len(t.scores):
+                <td>@t.scores[n]</td>
+                @else:
+                <td></td>
+                @end
+            @end
+            <td class="center">@t.total!s</td>
+            </tr>
+        @end
+    </table>
+</body>
+</html>
