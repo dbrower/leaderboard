@@ -3,6 +3,9 @@ p { font: Helvetica }
 h1 { width: 100% }
 .title { font-size: 48pt; text-align: right}
 .zebra { background-color: #bbccff; } 
+.top { visibility: hidden; }
+.middle { visibility: hidden; }
+.bottom { visibility: hidden; }
 table { width: 100%; }
 th {font-size: 24pt; text-align: center; padding-left: 15px; padding-right: 15px}
 td {font-size: 18pt; text-align: right; padding-left:15px; padding-right: 15px}

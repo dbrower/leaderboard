@@ -3,6 +3,53 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="leaderboard.css">
+    <script language="javascript">
+    document.onkeypress= keypress;
+
+function keypress(e)
+{
+    e = e || window.event;
+    if (e.charCode === 32) {
+        if (e.shiftKey) {
+            togglelist(["top","middle","bottom"], "hidden")
+        } else {
+            togglelist(["bottom","middle","top"], "visible")
+        }
+        return false
+    }
+}
+
+function togglelist(list, onoff) {
+    for(i=0; i < list.length; i++) {
+        if (checkandtoggle(list[i], onoff)) {
+            return;
+        }
+    }
+}
+
+// three groups: top, middle, bottom
+// four states:
+// 1) all hidden
+// 2) only bottom showing
+// 3) only bottom and middle showing
+// 4) all showing
+
+// onoff should be "hidden" or "visible"
+// returns true if the elements in which are toggled. false otherwise
+function checkandtoggle(which, onoff) {
+    var rows = document.getElementsByClassName(which);
+    if (rows.length < 1) {
+        return false;
+    }
+    if (rows[0].style.visibility == onoff) {
+        return false;
+    }
+    for (i=0; i < rows.length; i++) {
+        rows[i].style.visibility = onoff;
+    }
+    return true;
+}
+    </script>
 </head>
 <body>
     <h1><img src="sjcpl_logo.jpg">

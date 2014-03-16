@@ -2,6 +2,52 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="leaderboard.css">
+    <script language="javascript">
+    document.onkeypress= keypress;
+
+function keypress(e)
+{
+    e = e || window.event;
+    if (e.charCode === 32) {
+        if (e.shiftKey) {
+            togglelist(["top","middle","bottom"], "hidden")
+        } else {
+            togglelist(["bottom","middle","top"], "visible")
+        }
+        return false
+    }
+}
+// three groups: top, middle, bottom
+// four states:
+// 1) all hidden
+// 2) only bottom showing
+// 3) only bottom and middle showing
+// 4) all showing
+
+// onoff should be "hidden" or "visible"
+// returns true if the elements in which are toggled. false otherwise
+function checkandtoggle(which, onoff) {
+    var rows = document.getElementsByClassName(which);
+    if (rows.length < 1) {
+        return false;
+    }
+    if (rows[0].style.visibility == onoff) {
+        return false;
+    }
+    for (i=0; i < rows.length; i++) {
+        rows[i].style.visibility = onoff;
+    }
+    return true;
+}
+
+function togglelist(list, onoff) {
+    for(i=0; i < list.length; i++) {
+        if (checkandtoggle(list[i], onoff)) {
+            return;
+        }
+    }
+}
+    </script>
 </head>
 <body>
     <h1><img src="sjcpl_logo.jpg">
@@ -9,18 +55,12 @@
         Leaderboard
     </span></h1>
     <table>
-        <tr><th>Rank</th>
-            <th>Team Name</th>
-            <th>Table</th>
+        <tr><th>Rank</th> <th>Team Name</th> <th>Table</th>
             <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th> <th>7</th> <th>8</th> <th>9</th> <th>10</th>
             <th>Total</th>
         </tr>
-            <tr
-                class="zebra"
-            >
-            <td class="center">
-                    1
-                </td>
+            <tr class="zebra top">
+            <td class="center"> 1 </td>
             <td class="teamname">Gravity's Elbow</td>
             <td class="tablenumber">10</td>
                 <td>             4</td>
@@ -35,8 +75,7 @@
                 <td>9</td>
             <td class="center">80</td>
             </tr>
-            <tr
-            >
+            <tr class="top" >
             <td class="center">
                     2
                 </td>
@@ -55,7 +94,7 @@
             <td class="center">78</td>
             </tr>
             <tr
-                class="zebra"
+                class="zebra top"
             >
             <td class="center">
                     3
@@ -74,7 +113,7 @@
                 <td> 8</td>
             <td class="center">73</td>
             </tr>
-            <tr
+            <tr class="middle"
             >
             <td class="center">
                     4
@@ -94,7 +133,7 @@
             <td class="center">70</td>
             </tr>
             <tr
-                class="zebra"
+                class="zebra middle"
             >
             <td class="center">
                     4
@@ -113,7 +152,7 @@
                 <td> 9</td>
             <td class="center">70</td>
             </tr>
-            <tr
+            <tr class="middle"
             >
             <td class="center">
                     4
@@ -133,7 +172,7 @@
             <td class="center">70</td>
             </tr>
             <tr
-                class="zebra"
+                class="zebra middle"
             >
             <td class="center">
                     7
@@ -152,7 +191,7 @@
                 <td>6</td>
             <td class="center">69</td>
             </tr>
-            <tr
+            <tr class="middle"
             >
             <td class="center">
                     7
@@ -172,7 +211,7 @@
             <td class="center">69</td>
             </tr>
             <tr
-                class="zebra"
+                class="zebra middle"
             >
             <td class="center">
                     7
@@ -191,7 +230,7 @@
                 <td> 7</td>
             <td class="center">69</td>
             </tr>
-            <tr
+            <tr class="middle"
             >
             <td class="center">
                     10
@@ -211,7 +250,7 @@
             <td class="center">67</td>
             </tr>
             <tr
-                class="zebra"
+                class="zebra middle"
             >
             <td class="center">
                     11
@@ -230,7 +269,7 @@
                 <td>7</td>
             <td class="center">66</td>
             </tr>
-            <tr
+            <tr class="middle"
             >
             <td class="center">
                     12
@@ -250,7 +289,7 @@
             <td class="center">65</td>
             </tr>
             <tr
-                class="zebra"
+                class="zebra middle"
             >
             <td class="center">
                     13
@@ -269,7 +308,7 @@
                 <td> 6</td>
             <td class="center">64</td>
             </tr>
-            <tr
+            <tr class="middle"
             >
             <td class="center">
                     14
@@ -288,8 +327,8 @@
                 <td> 5</td>
             <td class="center">62</td>
             </tr>
-            <tr
-                class="zebra"
+            <tr 
+                class="zebra middle"
             >
             <td class="center">
                     15
@@ -308,7 +347,7 @@
                 <td> 4</td>
             <td class="center">57</td>
             </tr>
-            <tr
+            <tr class="middle"
             >
             <td class="center">
                     15
@@ -328,7 +367,7 @@
             <td class="center">57</td>
             </tr>
             <tr
-                class="zebra"
+                class="zebra bottom"
             >
             <td class="center">
                     17
@@ -347,7 +386,7 @@
                 <td> 4</td>
             <td class="center">55</td>
             </tr>
-            <tr
+            <tr class="bottom"
             >
             <td class="center">
                     18
@@ -367,7 +406,7 @@
             <td class="center">50</td>
             </tr>
             <tr
-                class="zebra"
+                class="zebra bottom"
             >
             <td class="center">
                     19
