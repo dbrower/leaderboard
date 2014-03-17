@@ -22,8 +22,14 @@ class Team:
         self.scores = scores
         self.total = sum(map(int_maybe, scores))
         self.rank = None
+        self.group = "middle"
     def __repr__(self):
         return "#{0.rank} {0.name} (@{0.tablenr}) {0.scores} = {0.total}".format(self)
+
+def html_rank(v):
+    if v != None:
+        return str(v)
+    return ""
 
 def compare_teams(x, y):
     # primary sort is total score, decreasing
@@ -63,12 +69,15 @@ if teams[0].total != 0:
 from wheezy.template.engine import Engine
 from wheezy.template.ext.core import CoreExtension
 from wheezy.template.loader import FileLoader
+from cgi import escape
 
 searchpath = ['.']
 engine = Engine(
     loader=FileLoader(searchpath),
     extensions=[CoreExtension()]
 )
+engine.global_vars.update({'html_rank': html_rank,
+                           'e': escape})
 template = engine.get_template('leaderboard_template.html')
 
 # cycle for the table zebra striping
