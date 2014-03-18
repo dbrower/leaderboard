@@ -37,10 +37,16 @@ terminal). The published page can then be accessed using the url
 
 The `update.sh` script uses the `make_leaderboard.py` utility to generate the
 html page. It requires the [wheezy][] template engine to be installed, for
-better or worse. This could be easily swapped out for others. The file
-`leaderboard_template.html` is the template for the html.
+better or worse. This could be easily swapped out for other templating systems.
+The file `leaderboard_template.html` is the template for the html.
 
  [wheezy]: https://pypi.python.org/pypi/wheezy.template
+
+The teams are grouped into the bottom three, the top three, and everything in
+the middle. When the page is opened, no teams are displayed. By hitting the
+spacebar, the teams are revealed. First the bottom group is shown, then the
+middle, and finally, on the third press of the spacebar, the top teams are
+revealed. Hitting shift-spacebar will hide the groups in the reverse order.
 
 Enjoy.
 
