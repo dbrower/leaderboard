@@ -6,8 +6,7 @@
     <script language="javascript">
     document.onkeypress= keypress;
 
-function keypress(e)
-{
+function keypress(e) {
     e = e || window.event;
     if (e.charCode === 32) {
         if (e.shiftKey) {
@@ -38,10 +37,7 @@ function togglelist(list, onoff) {
 // returns true if the elements in which are toggled. false otherwise
 function checkandtoggle(which, onoff) {
     var rows = document.getElementsByClassName(which);
-    if (rows.length < 1) {
-        return false;
-    }
-    if (rows[0].style.visibility == onoff) {
+    if (rows.length < 1 || rows[0].style.visibility == onoff) {
         return false;
     }
     for (i=0; i < rows.length; i++) {
@@ -74,9 +70,9 @@ zebra \
             <td class="tablenumber">@t.tablenr!s</td>
             @for n in range(10):
                 @if n < len(t.scores):
-                <td>@t.scores[n]</td>
+            <td>@t.scores[n]</td>
                 @else:
-                <td></td>
+            <td></td>
                 @end
             @end
             <td class="center">@t.total!s</td>
