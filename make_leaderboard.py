@@ -51,6 +51,14 @@ def assign_ranks(teams):
             previous_total = team.total
         team.rank = rank
         current_index += 1
+    # now group the teams into a top, middle, and bottom
+    # every team is "middle" by default
+    bottom_rank = teams[-3].rank
+    for team in teams:
+        if team.rank <= 3:
+            team.group = "top"
+        elif team.rank >= bottom_rank:
+            team.group = "bottom"
 
 # read data file
 teams = []
