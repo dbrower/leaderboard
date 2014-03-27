@@ -51,11 +51,13 @@ def assign_ranks(teams):
             previous_total = team.total
         team.rank = rank
         current_index += 1
-    # now group the teams into a top, middle, and bottom
+    # now group the teams into thirds: top, middle, and bottom
     # every team is "middle" by default
-    bottom_rank = teams[-3].rank
+    n = len(teams)
+    top_rank = n / 3
+    bottom_rank = teams[1 + 2*n/3].rank
     for team in teams:
-        if team.rank <= 3:
+        if team.rank <= top_rank:
             team.group = "top"
         elif team.rank >= bottom_rank:
             team.group = "bottom"
