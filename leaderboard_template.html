@@ -55,7 +55,6 @@ function checkandtoggle(which, onoff) {
     <table>
         <tr><th>Rank</th>
             <th>Team Name</th>
-            <th>Table</th>
             <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th> <th>7</th> <th>8</th> <th>9</th> <th>10</th>
             <th>Total</th>
         </tr>
@@ -67,7 +66,6 @@ zebra \
 ">
             <td class="center">@t.rank!html_rank</td>
             <td class="teamname">@t.name!e</td>
-            <td class="tablenumber">@t.tablenr!s</td>
             @for n in range(10):
                 @if n < len(t.scores):
             <td>@t.scores[n]</td>
