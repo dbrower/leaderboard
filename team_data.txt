@@ -1,22 +1,22 @@
-1,Napoli's Ninja's,
-2,Speed Shrimp 3,
-3,The Talking Dead,
-4,Laderer & Fischer,
-5,The Discombobulators,
-6,4 and 1/2 Masters,
-7,Deep Blue,
-8,Misnomers,
-9,Dramatic Informatics,
-10,The Frank-Einsteins,
-11,The Intra-Library Lions,
-12,Black and White and Read all over,
-13,Fo' Shizzle my Quizzle,
-14,Decline of Western Trivialization,
-15,Frankies Bunch,
-16,Staph Micro,
-17,Team 100,
-18,Dewey Decimators,
-19,Uncertain and Unknown,
-20,The Absent Minded,
-21,Library Voices 3,
-22,Wisenheimers,
+1,Napoli's Ninja's,                     8,6,9, 8, 5,  5, 9, 9,5,10
+2,Speed Shrimp 3,                       7,5,9, 7, 5,  7, 8, 7,8,9
+3,The Talking Dead,                     7,5,8, 9, 8,  6, 8, 9,7,8
+4,Laderer & Fischer,                    6,5,7, 8, 8,  9, 7, 7,6,8
+5,The Discombobulators,                 8,9,8, 8, 6,  6, 9, 9,6,8
+6,4 and 1/2 Masters,                    7,6,5, 7, 6,  9, 7, 8,5,7
+7,Deep Blue,                            8,6,9, 7, 6,  7, 7, 8,6,6
+8,Misnomers,                            7,7,9, 7, 3,  8, 9, 9,7,7
+9,Dramatic Informatics,                 9,9,8, 8, 9,  8, 9, 9,6,7
+10,The Frank-Einsteins,                 9,7,9, 9, 8,  9,10, 8,9,9
+11,The Intra-Library Lions,             8,6,8,10, 9,  8, 8,10,8,8
+12,Black and White and Read all over,   8,6,7, 8, 8,  7, 7, 8,5,8
+13,Fo' Shizzle my Quizzle,              8,6,8,10, 6,  8, 7,10,7,9
+14,Decline of Western Trivialization,   8,7,9, 9,10,  5, 8, 9,7,6
+15,Frankies Bunch,                      6,8,8, 9, 7,  8, 7, 9,7,6
+16,Staph Micro,                         5,7,8, 8, 5,  9, 7, 7,4,8
+17,Team 100,                            7,7,7, 9, 4,  8, 6, 8,5,6
+18,Dewey Decimators,                    6,6,7, 8, 8,  9, 9, 9,5,5
+19,Uncertain and Unknown,               5,5,4, 9, 3,  7, 5, 6,7,5
+20,The Absent Minded Mary Porter,       9,8,9, 9, 8, 10, 8,10,7,7
+21,Library Voices 3,                    8,6,6, 9, 7,  6, 7, 8,5,7
+22,Weisenheimers,                       7,9,8, 6, 6,  8, 9, 9,5,6
