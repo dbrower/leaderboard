@@ -1,7 +1,7 @@
 # SJCPL Leaderboard
 
-This code was used to maintain the leaderboard for the 2013 trivia night. The
-overall workflow was
+This code originally was used to maintain the leaderboard for the 2013 trivia
+night. The overall workflow was:
 
  1. Enter team data (name, table number, scores) into a csv file
  2. Tabulate and rank the teams; output the results as an html file
@@ -12,6 +12,10 @@ Once this system is set up, there are no runtime dependencies on the internet.
 However, there is a dependency on having the local wifi network working. The
 only way around that is to generate the html file on the same computer as the
 one which is displaying the leaderboard to the projector.
+
+The displayed html has some javascript so that the scores can be progressively
+revealed. At first no scores will show. Pressing `space` will reveal the bottom
+third of teams. Press `space` two more times to get the rest.
 
 # Details
 
@@ -49,7 +53,3 @@ middle, and finally, on the third press of the spacebar, the top teams are
 revealed. Hitting shift-spacebar will hide the groups in the reverse order.
 
 Enjoy.
-
-
-Don Brower  
-don.brower@gmail.com
