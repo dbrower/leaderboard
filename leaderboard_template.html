@@ -48,12 +48,13 @@ function checkandtoggle(which, onoff) {
     </script>
 </head>
 <body>
-    <h1><img src="sjcpl_logo_bw.png">
-    <span class="title">
-        Leaderboard
-    </span></h1>
+    <h1>
+        <img src="sjcpl_logo_bw.png">
+        <span class="title">Leaderboard</span>
+    </h1>
     <table>
-        <tr><th>Rank</th>
+        <tr>
+            <th>Rank</th>
             <th>Team Name</th>
             <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th> <th>7</th> <th>8</th> <th>9</th> <th>10</th>
             <th>Total</th>
@@ -68,9 +69,9 @@ zebra \
             <td class="teamname">@t.name!e</td>
             @for n in range(10):
                 @if n < len(t.scores):
-            <td>@t.scores[n]</td>
+                    <td>@t.scores[n]</td>
                 @else:
-            <td></td>
+                    <td></td>
                 @end
             @end
             <td class="center">@t.total!s</td>
