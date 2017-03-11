@@ -1,55 +1,57 @@
 # SJCPL Leaderboard
 
-This code originally was used to maintain the leaderboard for the 2013 trivia
-night. The overall workflow was:
+This code runs the leaderboard for trivia night. Once the system is set up
+there are no runtime dependencies on the internet. The code opens a web server
+on port 80 to display the leaderboard, and runs a second web server on port
+8000 to provide an admin console. The admin console allows for adding teams,
+adding scores, and modifying scores. All changes to the scores are saved to
+the file `team_data.tsv`.
 
- 1. Enter team data (name, table number, scores) into a csv file
- 2. Tabulate and rank the teams; output the results as an html file
- 3. Publish the html file on a web server running on the same laptop
- 4. Display the html file using the target computer
+The displayed score page has javascript to progressively revealed the scores.
+At first no scores will show. Pressing `space` will reveal the bottom
+third of teams. Press `space` again to show the bottom two thirds, and pressing
+`space` a third time will display the rest.
 
-Once this system is set up, there are no runtime dependencies on the internet.
-However, there is a dependency on having the local wifi network working. The
-only way around that is to generate the html file on the same computer as the
-one which is displaying the leaderboard to the projector.
-
-The displayed html has some javascript so that the scores can be progressively
-revealed. At first no scores will show. Pressing `space` will reveal the bottom
-third of teams. Press `space` two more times to get the rest.
+This code originally was a python script for the 2013 trivia night. It was
+rewritten in Go for the 2017 trivia night.
 
 # Details
 
-The csv file consists of a sequence of lines, each line having the format
+The program is in Go; compile it by running `go build`. Then run the program
+by running `sudo ./leaderboard`. The `sudo` is required since root privildges
+are needed for the program to listen on port 80, the usual HTTP server port.
 
-    <table number>,<team name>, <score round 1>, <score round 2>, ...
+View the admin page by visiting `localhost:8000` in a browser window.
 
-A sample line is
-
-    6,Deliberators,   8, 10, 4
-
-This line describes the team "Deliberators" at table 6. They have scored 8 in
-round 1, 10 points in round 2, and 4 in round 3. Currently, the csv file must
-be in the current directory and named `team_data.txt`.
-
-Execute the `update.sh` script to translate the csv file into the ranked html
-document and copy it into the local web server's root. The generated files are
-copied to the directory `/Library/WebServer/Documents/`, which is the default
-root for the Apache install in OSX. (Enable "Web Sharing" in the Sharing
-control panel). In my case, my machine name is `chance` (run `hostname` at the
+You can view the score page by visiting the web page on the computer the program
+is running on. In my case, my machine name is `chance` (run `hostname` at the
 terminal). The published page can then be accessed using the url
 `http://chance.local`.
-
-The `update.sh` script uses the `make_leaderboard.py` utility to generate the
-html page. It requires the [wheezy][] template engine to be installed, for
-better or worse. This could be easily swapped out for other templating systems.
-The file `leaderboard_template.html` is the template for the html.
-
- [wheezy]: https://pypi.python.org/pypi/wheezy.template
 
 The teams are grouped into the bottom three, the top three, and everything in
 the middle. When the page is opened, no teams are displayed. By hitting the
 spacebar, the teams are revealed. First the bottom group is shown, then the
 middle, and finally, on the third press of the spacebar, the top teams are
 revealed. Hitting shift-spacebar will hide the groups in the reverse order.
+
+The program keeps the current scores saved into this file. In case of an emergency
+the file could be edited by hand and reloaded with the `load team_data.txt`
+command in the admin console.
+
+The save file consists of a sequence of lines, each line having the format
+
+    <table number> \t <team name> \t <score round 1> \t <score round 2> \t ...
+
+where `\t` is a tab character.
+A sample line is
+
+    6\tDeliberators\t8\t10\t4
+
+This line describes the team "Deliberators" at table 6. They have scored 8 in
+round 1, 10 points in round 2, and 4 in round 3. Currently, the csv file must
+be in the current directory and named `team_data.txt`.
+
+The file `leaderboard_template.html` is the template for the score display page.
+The file `admin_template.html` is the template for the admin page.
 
 Enjoy.

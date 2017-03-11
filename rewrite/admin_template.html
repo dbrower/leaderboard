@@ -1,0 +1,46 @@
+<html>
+<body>
+<h1>Leaderboard Admin</h1>
+<table>
+<thead>
+<th>Number</th> <th>Name</th>
+<th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th>
+<th>6</th> <th>7</th> <th>8</th> <th>9</th> <th>10</th>
+<th>Total</th> <th>Rank</th> <th>Group</th>
+</thead>
+<tbody>
+{{ range .Teams }}
+<tr>
+	<td>{{ .Number }}</td>
+	<td>{{ .Name }}</td>
+	{{ range .Scores }}
+	<td>{{ . }}</td>
+	{{ end }}
+	<td>{{ .Total }}</td>
+	<td>{{ .Rank }}</td>
+	<td>{{ .Group }}</td>
+</tr>
+{{ end }}
+</tbody>
+</table>
+<h2>Command History</h2>
+<pre>
+{{ range .History}}{{ . }}
+{{ end }}
+</pre>
+<form method="post">
+<label for="command">Command</label>
+	<input type="text" id="command" name="cmd" size="80" autofocus>
+	<button type="submit">Execute</button>
+</form>
+<p>Possible commands
+<ul>
+<li>addteam [team number] [team name] --- Add a new team or change a team name</li>
+<li>score [team number] [round] [new score] --- Alter an entered score</li>
+<li>add [team number] [score] ... --- Input a list of scores</li>
+<li>save [filename] --- Save score data into filename</li>
+<li>load [filename] --- Load and replace current scores from filename</li>
+</ul>
+</p>
+</body>
+</html>
