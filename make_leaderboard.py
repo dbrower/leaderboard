@@ -8,13 +8,6 @@ def int_maybe(x):
     except:
         return 0
 
-class Cycle:
-    def __init__(self):
-        self.is_odd = False
-    def cycle(self):
-        self.is_odd = not self.is_odd
-        return self.is_odd
-
 class Team:
     def __init__(self, name, tablenr, scores):
         self.name = name
@@ -90,7 +83,5 @@ engine.global_vars.update({'html_rank': html_rank,
                            'e': escape})
 template = engine.get_template('leaderboard_template.html')
 
-# cycle for the table zebra striping
-c = Cycle()
 with open('leaderboard.html', 'w') as f:
-    f.write(template.render({"teams" : teams, "cycle" : c.cycle}))
+    f.write(template.render({"teams" : teams}))

@@ -1,4 +1,4 @@
-@require(teams, cycle)
+@require(teams)
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,11 +60,7 @@ function checkandtoggle(which, onoff) {
             <th>Total</th>
         </tr>
         @for t in teams:
-        <tr class="@t.group \
-@if cycle():
-zebra \
-@end
-">
+        <tr class="@t.group">
             <td class="center">@t.rank!html_rank</td>
             <td class="teamname">@t.name!e</td>
             @for n in range(10):

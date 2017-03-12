@@ -1,13 +1,14 @@
 p { font: Helvetica }
 h1 { width: 100%; max-height: 100%; text-align: center }
 .title { font-size: 48pt; text-align: right}
-.zebra { background-color: #bbccff; } 
 .top { visibility: hidden; }
 .middle { visibility: hidden; }
 .bottom { visibility: hidden; }
 table { width: 100%; }
 th {font-size: 24pt; text-align: center; padding-left: 15px; padding-right: 15px}
 td {font-size: 18pt; text-align: right; padding-left:15px; padding-right: 15px}
+tbody tr:nth-child(even) { }
+tbody tr:nth-child(odd) { background-color: #bbccff; }
 .teamname {text-align: left; font-weight: bold; }
 .tablenumber {font-style: italic; text-align: center}
 .center { text-align: center}
