@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="leaderboard.css">
+    <link rel="stylesheet" type="text/css" href="/static/leaderboard.css">
     <script language="javascript">
-    document.onkeypress= keypress;
+document.onkeypress = keypress;
 
 function keypress(e) {
     e = e || window.event;
@@ -25,15 +25,15 @@ function togglelist(list, onoff) {
     }
 }
 
-// three groups: top, middle, bottom
-// four states:
-// 1) all hidden
-// 2) only bottom showing
-// 3) only bottom and middle showing
-// 4) all showing
 
-// onoff should be "hidden" or "visible"
-// returns true if the elements in which are toggled. false otherwise
+
+
+
+
+
+
+
+
 function checkandtoggle(which, onoff) {
     var rows = document.getElementsByClassName(which);
     if (rows.length < 1 || rows[0].style.visibility == onoff) {
@@ -44,11 +44,11 @@ function checkandtoggle(which, onoff) {
     }
     return true;
 }
-    </script>
+</script>
 </head>
 <body>
     <h1>
-        <img src="sjcpl_logo_bw.png">
+        <img src="/static/sjcpl_logo_bw.png">
         <span class="title">Leaderboard</span>
     </h1>
     <table>
@@ -61,347 +61,418 @@ function checkandtoggle(which, onoff) {
         <tr class="top">
             <td class="center">1</td>
             <td class="teamname">The Absent Minded</td>
-                    <td>       10</td>
-                    <td> 8</td>
-                    <td> 9</td>
-                    <td> 8</td>
-                    <td>10</td>
-                    <td>  10</td>
-                    <td>10</td>
-                    <td> 9</td>
-                    <td> 9</td>
-                    <td> 8 </td>
+            
+                <td>9</td>
+                <td>10</td>
+                <td>9</td>
+                <td>10</td>
+                <td>9</td>
+                <td>9</td>
+                <td>9</td>
+                <td>9</td>
+                <td>9</td>
+                <td>8</td>
             <td class="center">91</td>
         </tr>
         <tr class="top">
             <td class="center">2</td>
-            <td class="teamname">Legion of Doom</td>
-                    <td>           9</td>
-                    <td> 8</td>
-                    <td>10</td>
-                    <td> 6</td>
-                    <td>10</td>
-                    <td>   9</td>
-                    <td> 9</td>
-                    <td> 8</td>
-                    <td> 9</td>
-                    <td> 9 </td>
+            <td class="teamname">We Liked Don Cheadle Before It Was Cool</td>
+            
+                <td>7</td>
+                <td>10</td>
+                <td>10</td>
+                <td>10</td>
+                <td>10</td>
+                <td>9</td>
+                <td>9</td>
+                <td>8</td>
+                <td>8</td>
+                <td>9</td>
+            <td class="center">90</td>
+        </tr>
+        <tr class="top">
+            <td class="center">3</td>
+            <td class="teamname">The Defectors</td>
+            
+                <td>8</td>
+                <td>10</td>
+                <td>8</td>
+                <td>9</td>
+                <td>7</td>
+                <td>10</td>
+                <td>9</td>
+                <td>9</td>
+                <td>9</td>
+                <td>8</td>
             <td class="center">87</td>
         </tr>
         <tr class="top">
-            <td class="center">3</td>
-            <td class="teamname">Let's Get Physics-cal</td>
-                    <td>    10</td>
-                    <td> 6</td>
-                    <td> 9</td>
-                    <td> 7</td>
-                    <td> 8</td>
-                    <td>  10</td>
-                    <td>10</td>
-                    <td> 9</td>
-                    <td> 9</td>
-                    <td> 6 </td>
-            <td class="center">84</td>
-        </tr>
-        <tr class="top">
-            <td class="center">3</td>
-            <td class="teamname">Literally Irregardless</td>
-                    <td>    8</td>
-                    <td> 6</td>
-                    <td>10</td>
-                    <td> 6</td>
-                    <td>10</td>
-                    <td>   9</td>
-                    <td>10</td>
-                    <td> 9</td>
-                    <td>10</td>
-                    <td> 6 </td>
-            <td class="center">84</td>
-        </tr>
-        <tr class="top">
-            <td class="center">5</td>
-            <td class="teamname">Titan Trivia</td>
-                    <td>             9</td>
-                    <td> 8</td>
-                    <td> 9</td>
-                    <td> 6</td>
-                    <td> 9</td>
-                    <td>  10</td>
-                    <td>10</td>
-                    <td> 8</td>
-                    <td> 8</td>
-                    <td> 6 </td>
-            <td class="center">83</td>
-        </tr>
-        <tr class="top">
-            <td class="center">6</td>
-            <td class="teamname">No Pun Intended!</td>
-                    <td>         10</td>
-                    <td> 5</td>
-                    <td>10</td>
-                    <td> 5</td>
-                    <td> 8</td>
-                    <td>  10</td>
-                    <td>10</td>
-                    <td> 8</td>
-                    <td> 7</td>
-                    <td> 9 </td>
+            <td class="center">4</td>
+            <td class="teamname">The Magnificent 7...plus Hank</td>
+            
+                <td>7</td>
+                <td>9</td>
+                <td>10</td>
+                <td>10</td>
+                <td>7</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>9</td>
             <td class="center">82</td>
         </tr>
         <tr class="top">
-            <td class="center">7</td>
-            <td class="teamname">Requiem for a Dream</td>
-                    <td>       8</td>
-                    <td> 6</td>
-                    <td> 8</td>
-                    <td> 6</td>
-                    <td>10</td>
-                    <td>   8</td>
-                    <td> 9</td>
-                    <td> 9</td>
-                    <td> 9</td>
-                    <td> 8 </td>
-            <td class="center">81</td>
+            <td class="center">5</td>
+            <td class="teamname">Astonishing Random Knowledge Of Stuff</td>
+            
+                <td>7</td>
+                <td>9</td>
+                <td>10</td>
+                <td>8</td>
+                <td>7</td>
+                <td>7</td>
+                <td>9</td>
+                <td>7</td>
+                <td>7</td>
+                <td>8</td>
+            <td class="center">79</td>
+        </tr>
+        <tr class="top">
+            <td class="center">6</td>
+            <td class="teamname">Straight Outta Quizton</td>
+            
+                <td>8</td>
+                <td>10</td>
+                <td>9</td>
+                <td>10</td>
+                <td>4</td>
+                <td>6</td>
+                <td>6</td>
+                <td>8</td>
+                <td>8</td>
+                <td>9</td>
+            <td class="center">78</td>
         </tr>
         <tr class="top">
             <td class="center">7</td>
-            <td class="teamname">Schadenfreudeians</td>
-                    <td>       10</td>
-                    <td> 6</td>
-                    <td> 9</td>
-                    <td> 6</td>
-                    <td>10</td>
-                    <td>   9</td>
-                    <td>10</td>
-                    <td> 7</td>
-                    <td> 9</td>
-                    <td> 5 </td>
-            <td class="center">81</td>
+            <td class="teamname">Not Necessarily the News</td>
+            
+                <td>6</td>
+                <td>7</td>
+                <td>7</td>
+                <td>10</td>
+                <td>8</td>
+                <td>9</td>
+                <td>9</td>
+                <td>8</td>
+                <td>8</td>
+                <td>4</td>
+            <td class="center">76</td>
         </tr>
-        <tr class="middle">
-            <td class="center">9</td>
-            <td class="teamname">The Dewey Decimators</td>
-                    <td>    10</td>
-                    <td> 5</td>
-                    <td>10</td>
-                    <td> 5</td>
-                    <td> 9</td>
-                    <td>   9</td>
-                    <td>10</td>
-                    <td> 7</td>
-                    <td> 9</td>
-                    <td> 5 </td>
-            <td class="center">79</td>
-        </tr>
-        <tr class="middle">
-            <td class="center">10</td>
-            <td class="teamname">What's a Magistrate</td>
-                    <td>      7</td>
-                    <td> 7</td>
-                    <td> 7</td>
-                    <td> 6</td>
-                    <td>10</td>
-                    <td>   8</td>
-                    <td> 7</td>
-                    <td> 8</td>
-                    <td>10</td>
-                    <td> 8</td>
-            <td class="center">78</td>
-        </tr>
-        <tr class="middle">
-            <td class="center">11</td>
-            <td class="teamname">Berning Question</td>
-                    <td>         9</td>
-                    <td> 4</td>
-                    <td>10</td>
-                    <td> 7</td>
-                    <td> 8</td>
-                    <td>   7</td>
-                    <td>10</td>
-                    <td> 8</td>
-                    <td>10</td>
-                    <td> 4 </td>
-            <td class="center">77</td>
-        </tr>
-        <tr class="middle">
-            <td class="center">12</td>
-            <td class="teamname">Two Degrees</td>
-                    <td>               7</td>
-                    <td> 5</td>
-                    <td> 9</td>
-                    <td> 5</td>
-                    <td>10</td>
-                    <td>  10</td>
-                    <td>10</td>
-                    <td> 5</td>
-                    <td> 8</td>
-                    <td> 6 </td>
-            <td class="center">75</td>
-        </tr>
-        <tr class="middle">
-            <td class="center">12</td>
-            <td class="teamname">Hungry, hungry HIPPA</td>
-                    <td>   7</td>
-                    <td> 8</td>
-                    <td> 8</td>
-                    <td> 6</td>
-                    <td>10</td>
-                    <td>   9</td>
-                    <td> 8</td>
-                    <td> 8</td>
-                    <td> 8</td>
-                    <td> 3 </td>
-            <td class="center">75</td>
-        </tr>
-        <tr class="middle">
-            <td class="center">12</td>
-            <td class="teamname">Hamlet on Warm Bun</td>
-                    <td>       8</td>
-                    <td> 7</td>
-                    <td> 5</td>
-                    <td> 7</td>
-                    <td>10</td>
-                    <td>  10</td>
-                    <td> 7</td>
-                    <td> 7</td>
-                    <td>10</td>
-                    <td> 4</td>
-            <td class="center">75</td>
-        </tr>
-        <tr class="middle">
-            <td class="center">15</td>
-            <td class="teamname">Rebel Alliance</td>
-                    <td>           8</td>
-                    <td> 5</td>
-                    <td> 9</td>
-                    <td> 7</td>
-                    <td>10</td>
-                    <td>   8</td>
-                    <td> 8</td>
-                    <td> 7</td>
-                    <td> 7</td>
-                    <td> 5</td>
+        <tr class="top">
+            <td class="center">8</td>
+            <td class="teamname">Deviled Eggheads</td>
+            
+                <td>10</td>
+                <td>9</td>
+                <td>7</td>
+                <td>10</td>
+                <td>7</td>
+                <td>5</td>
+                <td>6</td>
+                <td>8</td>
+                <td>5</td>
+                <td>7</td>
             <td class="center">74</td>
         </tr>
         <tr class="middle">
+            <td class="center">9</td>
+            <td class="teamname">We Got Nothing&#39;</td>
+            
+                <td>7</td>
+                <td>8</td>
+                <td>7</td>
+                <td>7</td>
+                <td>6</td>
+                <td>8</td>
+                <td>10</td>
+                <td>7</td>
+                <td>7</td>
+                <td>5</td>
+            <td class="center">72</td>
+        </tr>
+        <tr class="middle">
+            <td class="center">9</td>
+            <td class="teamname">RBF Speak Easiers</td>
+            
+                <td>6</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>3</td>
+                <td>8</td>
+                <td>7</td>
+            <td class="center">72</td>
+        </tr>
+        <tr class="middle">
+            <td class="center">11</td>
+            <td class="teamname">Schadenfreudians</td>
+            
+                <td>6</td>
+                <td>10</td>
+                <td>9</td>
+                <td>7</td>
+                <td>5</td>
+                <td>7</td>
+                <td>6</td>
+                <td>7</td>
+                <td>6</td>
+                <td>8</td>
+            <td class="center">71</td>
+        </tr>
+        <tr class="middle">
+            <td class="center">11</td>
+            <td class="teamname">Sir Vale Lancers</td>
+            
+                <td>5</td>
+                <td>7</td>
+                <td>7</td>
+                <td>9</td>
+                <td>9</td>
+                <td>7</td>
+                <td>7</td>
+                <td>6</td>
+                <td>6</td>
+                <td>8</td>
+            <td class="center">71</td>
+        </tr>
+        <tr class="middle">
+            <td class="center">13</td>
+            <td class="teamname">What the Dickens? Way to meet our Great Expectations!</td>
+            
+                <td>7</td>
+                <td>10</td>
+                <td>8</td>
+                <td>9</td>
+                <td>5</td>
+                <td>8</td>
+                <td>8</td>
+                <td>5</td>
+                <td>6</td>
+                <td>3</td>
+            <td class="center">69</td>
+        </tr>
+        <tr class="middle">
+            <td class="center">13</td>
+            <td class="teamname">Public Exhibitionists</td>
+            
+                <td>4</td>
+                <td>8</td>
+                <td>10</td>
+                <td>7</td>
+                <td>9</td>
+                <td>7</td>
+                <td>10</td>
+                <td>3</td>
+                <td>6</td>
+                <td>5</td>
+            <td class="center">69</td>
+        </tr>
+        <tr class="middle">
+            <td class="center">15</td>
+            <td class="teamname">Alternative Facts</td>
+            
+                <td>5</td>
+                <td>9</td>
+                <td>7</td>
+                <td>7</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>5</td>
+                <td>8</td>
+                <td>5</td>
+            <td class="center">67</td>
+        </tr>
+        <tr class="middle">
             <td class="center">16</td>
-            <td class="teamname">A Mighty WINd</td>
-                    <td>             5</td>
-                    <td> 7</td>
-                    <td> 8</td>
-                    <td> 5</td>
-                    <td> 9</td>
-                    <td>   8</td>
-                    <td> 8</td>
-                    <td> 7</td>
-                    <td> 9</td>
-                    <td> 7 </td>
-            <td class="center">73</td>
+            <td class="teamname">Grammar Police</td>
+            
+                <td>5</td>
+                <td>9</td>
+                <td>5</td>
+                <td>9</td>
+                <td>8</td>
+                <td>6</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>5</td>
+            <td class="center">65</td>
+        </tr>
+        <tr class="middle">
+            <td class="center">17</td>
+            <td class="teamname">Mixed Bag</td>
+            
+                <td>5</td>
+                <td>5</td>
+                <td>9</td>
+                <td>8</td>
+                <td>6</td>
+                <td>8</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>5</td>
+            <td class="center">64</td>
         </tr>
         <tr class="bottom">
-            <td class="center">17</td>
-            <td class="teamname">Trivial Trivia</td>
-                    <td>            4</td>
-                    <td> 7</td>
-                    <td> 9</td>
-                    <td> 5</td>
-                    <td> 6</td>
-                    <td>   8</td>
-                    <td> 8</td>
-                    <td> 9</td>
-                    <td> 8</td>
-                    <td> 7 </td>
-            <td class="center">71</td>
+            <td class="center">18</td>
+            <td class="teamname">Henry and Friends</td>
+            
+                <td>3</td>
+                <td>7</td>
+                <td>7</td>
+                <td>6</td>
+                <td>6</td>
+                <td>7</td>
+                <td>9</td>
+                <td>3</td>
+                <td>7</td>
+                <td>8</td>
+            <td class="center">63</td>
         </tr>
         <tr class="bottom">
-            <td class="center">17</td>
-            <td class="teamname">Tequila Mockingbird</td>
-                    <td>       6</td>
-                    <td> 5</td>
-                    <td>10</td>
-                    <td> 5</td>
-                    <td> 9</td>
-                    <td>   7</td>
-                    <td>10</td>
-                    <td> 5</td>
-                    <td> 9</td>
-                    <td> 5 </td>
-            <td class="center">71</td>
-        </tr>
-        <tr class="bottom">
-            <td class="center">17</td>
-            <td class="teamname">Puckish Players</td>
-                    <td>          7</td>
-                    <td> 7</td>
-                    <td> 7</td>
-                    <td> 6</td>
-                    <td> 9</td>
-                    <td>   9</td>
-                    <td> 8</td>
-                    <td> 6</td>
-                    <td> 8</td>
-                    <td> 4 </td>
-            <td class="center">71</td>
+            <td class="center">18</td>
+            <td class="teamname">The Porcine Aviators</td>
+            
+                <td>5</td>
+                <td>7</td>
+                <td>8</td>
+                <td>7</td>
+                <td>4</td>
+                <td>7</td>
+                <td>4</td>
+                <td>6</td>
+                <td>8</td>
+                <td>7</td>
+            <td class="center">63</td>
         </tr>
         <tr class="bottom">
             <td class="center">20</td>
-            <td class="teamname">Nuclear</td>
-                    <td>                   6</td>
-                    <td> 8</td>
-                    <td> 9</td>
-                    <td> 5</td>
-                    <td> 8</td>
-                    <td>   5</td>
-                    <td> 8</td>
-                    <td> 7</td>
-                    <td> 7</td>
-                    <td> 7 </td>
-            <td class="center">70</td>
+            <td class="teamname">Wise Quackers</td>
+            
+                <td>2</td>
+                <td>7</td>
+                <td>8</td>
+                <td>4</td>
+                <td>6</td>
+                <td>8</td>
+                <td>8</td>
+                <td>6</td>
+                <td>7</td>
+                <td>5</td>
+            <td class="center">61</td>
         </tr>
         <tr class="bottom">
-            <td class="center">21</td>
-            <td class="teamname">Ask the Chief</td>
-                    <td>            3</td>
-                    <td> 6</td>
-                    <td>10</td>
-                    <td> 5</td>
-                    <td>10</td>
-                    <td>   8</td>
-                    <td> 7</td>
-                    <td> 6</td>
-                    <td> 9</td>
-                    <td> 5</td>
-            <td class="center">69</td>
+            <td class="center">20</td>
+            <td class="teamname">Not Ashamed of What We Did for a Klondike Bar</td>
+            
+                <td>4</td>
+                <td>8</td>
+                <td>8</td>
+                <td>6</td>
+                <td>8</td>
+                <td>7</td>
+                <td>7</td>
+                <td>5</td>
+                <td>4</td>
+                <td>4</td>
+            <td class="center">61</td>
         </tr>
         <tr class="bottom">
             <td class="center">22</td>
-            <td class="teamname">MTC</td>
-                    <td>                      3</td>
-                    <td> 5</td>
-                    <td> 7</td>
-                    <td> 3</td>
-                    <td> 7</td>
-                    <td>   5</td>
-                    <td> 6</td>
-                    <td> 6</td>
-                    <td> 6</td>
-                    <td> 5</td>
-            <td class="center">53</td>
+            <td class="teamname">Art Attacks</td>
+            
+                <td>5</td>
+                <td>8</td>
+                <td>6</td>
+                <td>9</td>
+                <td>5</td>
+                <td>6</td>
+                <td>9</td>
+                <td>2</td>
+                <td>6</td>
+                <td>4</td>
+            <td class="center">60</td>
         </tr>
         <tr class="bottom">
             <td class="center">23</td>
-            <td class="teamname">Boozers &amp; Losers</td>
-                    <td>         1</td>
-                    <td> 3</td>
-                    <td> 6</td>
-                    <td> 4</td>
-                    <td>10</td>
-                    <td>   8</td>
-                    <td> 5</td>
-                    <td> 5</td>
-                    <td> 6</td>
-                    <td> 2</td>
-            <td class="center">50</td>
+            <td class="teamname">Einstein Entities</td>
+            
+                <td>4</td>
+                <td>7</td>
+                <td>3</td>
+                <td>8</td>
+                <td>8</td>
+                <td>4</td>
+                <td>7</td>
+                <td>5</td>
+                <td>7</td>
+                <td>5</td>
+            <td class="center">58</td>
+        </tr>
+        <tr class="bottom">
+            <td class="center">24</td>
+            <td class="teamname">Merrill&#39;s Marauder&#39;s</td>
+            
+                <td>4</td>
+                <td>9</td>
+                <td>6</td>
+                <td>7</td>
+                <td>5</td>
+                <td>6</td>
+                <td>4</td>
+                <td>4</td>
+                <td>7</td>
+                <td>4</td>
+            <td class="center">56</td>
+        </tr>
+        <tr class="bottom">
+            <td class="center">25</td>
+            <td class="teamname">RBF Easy Speakers</td>
+            
+                <td>4</td>
+                <td>6</td>
+                <td>6</td>
+                <td>8</td>
+                <td>6</td>
+                <td>3</td>
+                <td>7</td>
+                <td>4</td>
+                <td>2</td>
+                <td>5</td>
+            <td class="center">51</td>
+        </tr>
+        <tr class="bottom">
+            <td class="center">26</td>
+            <td class="teamname">Linda.com</td>
+            
+                <td>6</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>7</td>
+                <td>4</td>
+                <td>2</td>
+                <td>5</td>
+                <td>6</td>
+                <td>1</td>
+            <td class="center">49</td>
         </tr>
     </table>
 </body>

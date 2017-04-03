@@ -1,10 +1,9 @@
-@require(teams)
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="leaderboard.css">
+    <link rel="stylesheet" type="text/css" href="/static/leaderboard.css">
     <script language="javascript">
-    document.onkeypress= keypress;
+document.onkeypress = keypress;
 
 function keypress(e) {
     e = e || window.event;
@@ -45,11 +44,11 @@ function checkandtoggle(which, onoff) {
     }
     return true;
 }
-    </script>
+</script>
 </head>
 <body>
     <h1>
-        <img src="sjcpl_logo_bw.png">
+        <img src="/static/sjcpl_logo_bw.png">
         <span class="title">Leaderboard</span>
     </h1>
     <table>
@@ -59,20 +58,16 @@ function checkandtoggle(which, onoff) {
             <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th> <th>7</th> <th>8</th> <th>9</th> <th>10</th>
             <th>Total</th>
         </tr>
-        @for t in teams:
-        <tr class="@t.group">
-            <td class="center">@t.rank!html_rank</td>
-            <td class="teamname">@t.name!e</td>
-            @for n in range(10):
-                @if n < len(t.scores):
-                    <td>@t.scores[n]</td>
-                @else:
-                    <td></td>
-                @end
-            @end
-            <td class="center">@t.total!s</td>
+        {{- range .Teams }}
+        <tr class="{{ .Group }}">
+            <td class="center">{{ .Rank }}</td>
+            <td class="teamname">{{ .Name }}</td>
+            {{ range .Scores }}
+                <td>{{ if ge . 0 }}{{ . }}{{ end }}</td>
+            {{- end }}
+            <td class="center">{{ .Total }}</td>
         </tr>
-        @end
+        {{- end }}
     </table>
 </body>
 </html>
