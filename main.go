@@ -161,10 +161,9 @@ func readTeam(line string) *Team {
 		case 2, 3, 4, 5, 6, 7, 8, 9, 10, 11:
 			var err error
 			n, err := strconv.Atoi(fields[i])
-			if err != nil {
-				return nil
+			if err == nil {
+				t.Scores[i-2] = n
 			}
-			t.Scores[i-2] = n
 		}
 	}
 	return t
