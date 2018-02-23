@@ -115,9 +115,18 @@ func genAlterScore(number, round, score string, e *Environment) {
 }
 
 func addScore(arg string, e *Environment) {
-	// add <n> <score> [ <n> <score> ... ]
+	// add <n> <score> [ "/" <n> <score> ... ]
 
+	first := true
 	for arg != "" {
+		if !first {
+			var slash string
+			slash, arg = takeTwo(arg)
+			if slash != "/" {
+				break
+			}
+		}
+		first = false
 		var number, score string
 		number, score, arg = takeThree(arg)
 		genAlterScore(number, "-1", score, e)
